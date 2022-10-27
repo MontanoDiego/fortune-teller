@@ -1,5 +1,5 @@
 :root {
-    --background: rgb(255, 255, 255);
+    --background: rgb(0, 0, 0);
     --header-background: rgb(254, 251, 245);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
@@ -10,10 +10,11 @@ body {
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr;
+    color: white;
 }
 
 header {
-    color: black;
+    color: rgb(207, 139, 33);
 }
 
 header .logo {
@@ -22,4 +23,49 @@ header .logo {
 
 main {
     padding: 20px;
+}
+
+.askingSec {
+    text-align: center;
+}
+
+.questionDisplay {
+    text-align: center;
+}
+
+#questionDisplay {
+    color: red;
+}
+
+#demiurge {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#demititle {
+    text-align: center;
+}
+
+#Answer {
+    color: darkred;
+}
+
+.centerHeading {
+    text-align: center;
+    border: 1rem solid rgb(0, 0, 0);
+}
+
+.container {
+    height: 200px;
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }

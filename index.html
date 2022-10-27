@@ -26,17 +26,29 @@
 
 <body>
     <header>
-        <img>
-        <h1>Fortune Teller</h1>
+        <h1 class="centerHeading">Fortune Teller</h1>
     </header>
 
     <main>
-        <section>
+        <section class="askingSec">
             <p>What do you want to know?</p>
-            <input type="text" />
-            <button>Submit</button>
+            <input type="text" id="question" />
+            <button id="submit">Submit</button>
             <p id="answer"></p>
-            <button>Ask Again!</button>
+        </section>
+        <section class="questionDisplay">
+            <h1>You asked me...</h1>
+            <p id="questionDisplay"></p>
+        </section>
+        <section class="answeringSec">
+            <img id="demiurge" src="./assets/demiurge.JPG" width="100" height="200"/>
+            <h1 id="demititle">The demiurge wills the answer... </h1>
+            <h2 id="answer"></h2>
+            <div class="container">
+                <div class="center">
+                    <button id="resetBtn">consult again</button>
+                </div>
+            </div>
         </section>
     </main>
 

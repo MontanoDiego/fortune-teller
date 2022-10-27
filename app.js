@@ -21,3 +21,30 @@ const answers = [
     'Very doubtful',
 ];
 
+// Get DOM Elements
+const submitButton = document.getElementById('submit');
+const question = document.getElementById('question');
+const resetBtn = document.getElementById('askAgain');
+const questionDisplay = document.getElementById('questionDisplay');
+const answer = document.getElementById('answer')
+
+// Events
+
+submitButton.addEventListener('click', () => {
+    const savedQuestion = question.value;
+    questionDisplay.textContent = savedQuestion;
+    document.getElementById('question').value = '';
+});
+
+resetBtn.addEventListener('click', () => {
+});
+
+
+// chooses random choice from answers
+const randInt = Math.floor(Math.random() * answers.length);
+const randomChoice = answers[randInt];
+
+// set text content to choice
+answer.textContent = randomChoice;
+
+
