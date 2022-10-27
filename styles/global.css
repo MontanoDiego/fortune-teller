@@ -25,16 +25,24 @@ main {
     padding: 20px;
 }
 
-.askingSec {
+.questionSection {
     text-align: center;
 }
 
-.questionDisplay {
+.answer {
     text-align: center;
+    color: darkred;
 }
 
 #questionDisplay {
     color: red;
+}
+.questionDisplay {
+    text-align: center;
+}
+
+.textCenter {
+    text-align: center;
 }
 
 #demiurge {
@@ -45,10 +53,6 @@ main {
 
 #demititle {
     text-align: center;
-}
-
-#Answer {
-    color: darkred;
 }
 
 .centerHeading {
@@ -68,4 +72,8 @@ main {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.hide {
+    display: none;
 }

@@ -30,20 +30,21 @@
     </header>
 
     <main>
-        <section class="askingSec">
-            <p>What do you want to know?</p>
-            <input type="text" id="question" />
-            <button id="submit">Submit</button>
-            <p id="answer"></p>
+        <section id="askingSec">
+            <p class="textCenter">What do you want to know?</p>
+            <div class="textCenter">
+                <input type="text" id="question" />
+                <button id="submit" >submit</button>
+            </div>
         </section>
-        <section class="questionDisplay">
-            <h1>You asked me...</h1>
-            <p id="questionDisplay"></p>
+        <section id="questionSection" class="hide">
+            <h1 class="textCenter">You asked me...</h1>
+            <p id="questionDisplay" class="questionDisplay"></p>
         </section>
-        <section class="answeringSec">
+        <section id="answeringSec" class="hide">
             <img id="demiurge" src="./assets/demiurge.JPG" width="100" height="200"/>
             <h1 id="demititle">The demiurge wills the answer... </h1>
-            <h2 id="answer"></h2>
+            <h2 id="answer" class="answer">yea</h2>
             <div class="container">
                 <div class="center">
                     <button id="resetBtn">consult again</button>

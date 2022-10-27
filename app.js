@@ -22,29 +22,38 @@ const answers = [
 ];
 
 // Get DOM Elements
+
+//elements
 const submitButton = document.getElementById('submit');
 const question = document.getElementById('question');
-const resetBtn = document.getElementById('askAgain');
+const resetBtn = document.getElementById('resetBtn');
 const questionDisplay = document.getElementById('questionDisplay');
-const answer = document.getElementById('answer')
+const answer = document.getElementById('answer');
+
+//sections
+const askingSection = document.getElementById('askingSec');
+const questionSection = document.getElementById('questionSection');
+const answeringSection = document.getElementById('answeringSec');
 
 // Events
 
+// sets submit button functionality
 submitButton.addEventListener('click', () => {
     const savedQuestion = question.value;
     questionDisplay.textContent = savedQuestion;
     document.getElementById('question').value = '';
+    const randInt = Math.floor(Math.random() * answers.length);
+    const randomChoice = answers[randInt];
+    answer.textContent = randomChoice;
+    toggleHide();
 });
-
+// sets consult again button functionality
 resetBtn.addEventListener('click', () => {
+    toggleHide();
 });
-
-
-// chooses random choice from answers
-const randInt = Math.floor(Math.random() * answers.length);
-const randomChoice = answers[randInt];
-
-// set text content to choice
-answer.textContent = randomChoice;
-
-
+// defines hiding toggling function
+function toggleHide() {
+    askingSection.classList.toggle('hide');
+    questionSection.classList.toggle('hide');
+    answeringSection.classList.toggle('hide');
+}
