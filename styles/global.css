@@ -1,5 +1,5 @@
 :root {
-    --background: rgb(224, 234, 247);
+    --background: rgb(0, 0, 0);
     --header-background: rgb(254, 251, 245);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
@@ -10,20 +10,11 @@ body {
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr;
+    color: white;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    padding: 15px;
-    height: 80px;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    background-color: var(--header-background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    color: rgb(207, 139, 33);
 }
 
 header .logo {
@@ -32,4 +23,57 @@ header .logo {
 
 main {
     padding: 20px;
+}
+
+.questionSection {
+    text-align: center;
+}
+
+.answer {
+    text-align: center;
+    color: darkred;
+}
+
+#questionDisplay {
+    color: red;
+}
+.questionDisplay {
+    text-align: center;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+#demiurge {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#demititle {
+    text-align: center;
+}
+
+.centerHeading {
+    text-align: center;
+    border: 1rem solid rgb(0, 0, 0);
+}
+
+.container {
+    height: 200px;
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    display: none;
 }
