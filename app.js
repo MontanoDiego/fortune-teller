@@ -39,13 +39,16 @@ const answeringSection = document.getElementById('answeringSec');
 
 // sets submit button functionality
 submitButton.addEventListener('click', () => {
+    audio.play();
     const savedQuestion = question.value;
     questionDisplay.textContent = savedQuestion;
     document.getElementById('question').value = '';
     const randInt = Math.floor(Math.random() * answers.length);
     const randomChoice = answers[randInt];
     answer.textContent = randomChoice;
+    // hides
     toggleHide();
+    
 });
 // sets consult again button functionality
 resetBtn.addEventListener('click', () => {
@@ -57,3 +60,6 @@ function toggleHide() {
     questionSection.classList.toggle('hide');
     answeringSection.classList.toggle('hide');
 }
+
+// add audio for button press
+const audio = new Audio('https://cdn.pixabay.com/download/audio/2021/08/09/audio_cb099d0a0a.mp3?filename=evil-demonic-laugh-6925.mp3');
